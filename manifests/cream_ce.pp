@@ -1,7 +1,7 @@
 class simple_grid::cream_ce (
   $site_level_config_file_path = lookup("simple_grid::site_level_config_file_path")
 ){
-  notify{"Config file path: ${site_level_config_file_path}"}
+  notify{"Config file path: ${site_level_config_file_path}":}
   ## Actions to be performed on Puppet Master
   #access site level configuration file and
   # 1) pull repository_url
