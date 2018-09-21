@@ -1,2 +1,3 @@
 ---
 simple_grid::test::test_param: 'common.yaml'
+simple_grid::site_level_config_file_path: '/etc/site-level.conf.yaml'

@@ -4,20 +4,13 @@
 #
 # @example
 #   include simple
-class simple_grid(
-	$test_param,
-	$os_param
-	)
+class simple_grid
 	{
 	file { '/root/test':
 		ensure => present,
 		content => "r10k check configuration",
 	}
-	notify {"aag laga di ${test_param} and ${os_param}":}
-	#include simple_grid::test
-	#notify {"config was ${test_param} and param was ${os_param}":}	
-#Class[simple::pre_conf] -> Class[simple::handle_repos] -> Class[simple::config_validate] -> Class[simple::config]
-	
+	#Class[simple::pre_conf] -> Class[simple::handle_repos] -> Class[simple::config_validate] -> Class[simple::config]
 	#class{"simple::pre_conf":}
 	#class{"simple::handle_repos":}
 	#class{"simple::config":}
