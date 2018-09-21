@@ -1,4 +1,4 @@
-class simple_grid::cream (
+class simple_grid::cream_ce (
   $site_level_config_file_path = lookup("simple_grid::site_level_config_file_path")
 ){
   notify{"Config file path: ${site_level_config_file_path}"}
