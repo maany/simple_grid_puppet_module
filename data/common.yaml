@@ -1,3 +1,2 @@
 ---
 simple_grid::test::config_param: 'common.yaml'
-simple_grid::test::os_param: 'common-os.yaml'
