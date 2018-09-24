@@ -13,6 +13,7 @@ class simple_grid::cream_ce (
 
   ## Actions to be performed on puppet client
   # git clone the repo
+  
   # run the pre-conf.py script by giving the cream section of site-level-config file as input
   # start the container
 }
