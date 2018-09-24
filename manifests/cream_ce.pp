@@ -19,12 +19,15 @@ class simple_grid::cream_ce (
     source      => 'https://github.com/WLCG-Lightweight-Sites/wlcg_lightweight_site_ce_cream',
     revision    => master,
   }
+  file {"/etc/simple_grid/cream_ce/yaim/pre_config.py":
+    mode => 755,
+  }
   # run the pre-conf.py script by giving the cream section of site-level-config file as input
   # case, yaim, copy host certificates
   exec {"pre-configuration":
     logoutput => true,
-    command   => '/usr/bin/python /etc/simple_grid/cream_ce/yaim/pre-config.py', #pass site level configuration file
-    cwd       => '/etc/simple_grid/cream_ce' 
+    command   => 'python /etc/simple_grid/cream_ce/yaim/pre_config.py', #pass site level configuration file
+    cwd       => '/etc/simple_grid/cream_ce',
   }
   
   # start the container
