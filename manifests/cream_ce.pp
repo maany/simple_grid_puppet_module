@@ -20,7 +20,8 @@ class simple_grid::cream_ce (
     revision    => master,
   }
   file {"/etc/simple_grid/cream_ce/yaim/pre_config.py":
-    mode => 755,
+    ensure => present,
+    mode   => '755',
   }
   # run the pre-conf.py script by giving the cream section of site-level-config file as input
   # case, yaim, copy host certificates
