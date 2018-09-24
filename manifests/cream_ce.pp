@@ -23,7 +23,7 @@ class simple_grid::cream_ce (
   # case, yaim, copy host certificates
   exec {"pre-configuration":
     logoutput => true,
-    command   => '/usr/bin python /etc/simple_grid/cream_ce/yaim/pre-config.py', #pass site level configuration file
+    command   => '/usr/bin/python /etc/simple_grid/cream_ce/yaim/pre-config.py', #pass site level configuration file
     cwd       => '/etc/simple_grid/cream_ce' 
   }
   
