@@ -1,5 +1,5 @@
 class simple_grid::cream_ce (
-  $site_level_config_file_path = lookup("simple_grid::site_level_config_file_path")
+  $site_level_config_file_path = lookup("simple_grid::site_level_config_file_path"),
 ){
   notify{"Config file path: ${site_level_config_file_path}":}
   ## Actions to be performed on Puppet Master
@@ -20,5 +20,12 @@ class simple_grid::cream_ce (
     revision    => master,
   }
   # run the pre-conf.py script by giving the cream section of site-level-config file as input
+  # case, yaim, copy host certificates
+  exec {"pre-configuration":
+    logoutput => true,
+    command   => '/usr/bin python /etc/simple_grid/cream_ce/yaim/pre-config.py', #pass site level configuration file
+    cwd       => '/etc/simple_grid/cream_ce' 
+  }
+  
   # start the container
 }
