@@ -13,7 +13,7 @@ class simple_grid::cream_ce (
 
   ## Actions to be performed on puppet client
   # git clone the repo
-  vcsrepo {"/etc/simple_grid":
+  vcsrepo {"/etc/simple_grid/cream_ce":
     ensure      => present,
     provider    => git,
     source      => 'https://github.com/WLCG-Lightweight-Sites/wlcg_lightweight_site_ce_cream',
