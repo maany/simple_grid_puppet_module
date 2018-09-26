@@ -29,6 +29,7 @@ class simple_grid::cream_ce (
     logoutput => true,
     command   => 'python /etc/simple_grid/cream_ce/yaim/pre_config.py', #pass site level configuration file
     cwd       => '/etc/simple_grid/cream_ce',
+    path => [ '/bin', '/usr/bin', '/usr/local/bin' ]
   }
   
   # start the container
